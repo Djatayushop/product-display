@@ -75,25 +75,9 @@
             cursor: pointer;
             transition: all 0.3s ease;
             text-decoration: none;
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
+            display: inline-block;
             position: relative;
             overflow: hidden;
-        }
-
-        .btn-thumbnail {
-            width: 30px;
-            height: 30px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 2px solid rgba(255, 255, 255, 0.3);
-            transition: all 0.3s ease;
-        }
-
-        .btn-primary:hover .btn-thumbnail {
-            transform: scale(1.1);
-            border-color: rgba(255, 255, 255, 0.8);
         }
 
         .btn-primary {
@@ -302,12 +286,6 @@
             .cta-buttons {
                 flex-direction: column;
                 align-items: center;
-                gap: 15px;
-            }
-            
-            .btn {
-                min-width: 200px;
-                justify-content: center;
             }
             
             .stats-section {
@@ -369,10 +347,7 @@
             </p>
             
             <div class="cta-buttons">
-                <a href="https://zeliastore.github.io/-Polycotton-Rectangle-Hijab/" class="btn btn-primary" target="_blank">
-                    <img src="https://cdn.orderonline.id/uploads/images_7683611748789446554.png" alt="Polycotton Rectangle Hijab" class="btn-thumbnail">
-                    Mulai Belanja
-                </a>
+                <a href="#" class="btn btn-primary" onclick="handleClick('shop')">Mulai Belanja</a>
                 <a href="#" class="btn btn-secondary" onclick="handleClick('explore')">Jelajahi Produk</a>
             </div>
         </div>
@@ -403,7 +378,9 @@
 
     <script>
         function handleClick(action) {
-            if (action === 'explore') {
+            if (action === 'shop') {
+                alert('Mengarahkan ke halaman produk...');
+            } else if (action === 'explore') {
                 alert('Mengarahkan ke katalog produk...');
             }
         }
