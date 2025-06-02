@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zeliastore.id - Hero Banner</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            overflow-x: hidden;
+        }
+
+        .hero-banner {
+            position: relative;
+            height: 100vh;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .hero-content {
+            text-align: center;
+            color: white;
+            z-index: 10;
+            max-width: 800px;
+            padding: 0 20px;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        .hero-title {
+            font-size: 4rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            animation: slideInLeft 1s ease-out 0.2s both;
+        }
+
+        .hero-subtitle {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            opacity: 0.9;
+            animation: slideInRight 1s ease-out 0.4s both;
+        }
+
+        .hero-description {
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+            opacity: 0.8;
+            line-height: 1.6;
+            animation: fadeIn 1s ease-out 0.6s both;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+            animation: fadeInUp 1s ease-out 0.8s both;
+        }
+
+        .btn {
+            padding: 15px 30px;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn-primary {
+            background: linear-gradient(45deg, #FF6B6B, #FF8E53);
+            color: white;
+            box-shadow: 0 8px 25px rgba(255, 107, 107, 0.3);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 35px rgba(0,0,0,0.2);
+        }
+
+        .btn-primary:hover {
+            background: linear-gradient(45deg, #FF5252, #FF7043);
+        }
+
+        .btn-secondary:hover {
+            background: white;
+            color: #667eea;
+        }
+
+        /* Floating elements */
+        .floating-elements {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+        }
+
+        .floating-element {
+            position: absolute;
+            opacity: 0.1;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .floating-element:nth-child(1) {
+            top: 20%;
+            left: 10%;
+            animation-delay: 0s;
+        }
+
+        .floating-element:nth-child(2) {
+            top: 60%;
+            right: 15%;
+            animation-delay: 2s;
+        }
+
+        .floating-element:nth-child(3) {
+            bottom: 20%;
+            left: 20%;
+            animation-delay: 4s;
+        }
+
+        .floating-element:nth-child(4) {
+            top: 30%;
+            right: 25%;
+            animation-delay: 1s;
+        }
+
+        /* Animated background shapes */
+        .bg-shape {
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+            animation: pulse 4s ease-in-out infinite;
+        }
+
+        .bg-shape:nth-child(1) {
+            width: 200px;
+            height: 200px;
+            top: 10%;
+            left: 5%;
+            animation-delay: 0s;
+        }
+
+        .bg-shape:nth-child(2) {
+            width: 150px;
+            height: 150px;
+            bottom: 15%;
+            right: 10%;
+            animation-delay: 2s;
+        }
+
+        .bg-shape:nth-child(3) {
+            width: 100px;
+            height: 100px;
+            top: 50%;
+            left: 80%;
+            animation-delay: 1s;
+        }
+
+        /* Stats section */
+        .stats-section {
+            position: absolute;
+            bottom: 50px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 50px;
+            color: white;
+            opacity: 0.8;
+        }
+
+        .stat-item {
+            text-align: center;
+            animation: fadeInUp 1s ease-out 1s both;
+        }
+
+        .stat-number {
+            font-size: 2rem;
+            font-weight: 700;
+            display: block;
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            opacity: 0.7;
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes slideInRight {
+            from {
+                opacity: 0;
+                transform: translateX(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0px);
+            }
+            50% {
+                transform: translateY(-20px);
+            }
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+                opacity: 0.1;
+            }
+            50% {
+                transform: scale(1.1);
+                opacity: 0.2;
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 2.5rem;
+            }
+            
+            .hero-subtitle {
+                font-size: 1.2rem;
+            }
+            
+            .hero-description {
+                font-size: 1rem;
+            }
+            
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .stats-section {
+                flex-direction: column;
+                gap: 20px;
+            }
+            
+            .floating-element {
+                display: none;
+            }
+        }
+
+        /* Scroll indicator */
+        .scroll-indicator {
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: white;
+            opacity: 0.7;
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateX(-50%) translateY(0);
+            }
+            40% {
+                transform: translateX(-50%) translateY(-10px);
+            }
+            60% {
+                transform: translateX(-50%) translateY(-5px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="hero-banner">
+        <!-- Background shapes -->
+        <div class="bg-shape"></div>
+        <div class="bg-shape"></div>
+        <div class="bg-shape"></div>
+
+        <!-- Floating elements -->
+        <div class="floating-elements">
+            <div class="floating-element">🛍️</div>
+            <div class="floating-element">💎</div>
+            <div class="floating-element">✨</div>
+            <div class="floating-element">🎁</div>
+        </div>
+
+        <!-- Main content -->
+        <div class="hero-content">
+            <h1 class="hero-title">Zeliastore.id</h1>
+            <h2 class="hero-subtitle">Toko Online Terpercaya #1 di Indonesia</h2>
+            <p class="hero-description">
+                Temukan koleksi produk berkualitas tinggi dengan harga terjangkau. 
+                Dari fashion, elektronik, hingga kebutuhan rumah tangga - semuanya ada di sini!
+            </p>
+            
+            <div class="cta-buttons">
+                <a href="#" class="btn btn-primary" onclick="handleClick('shop')">Mulai Belanja</a>
+                <a href="#" class="btn btn-secondary" onclick="handleClick('explore')">Jelajahi Produk</a>
+            </div>
+        </div>
+
+        <!-- Stats section -->
+        <div class="stats-section">
+            <div class="stat-item">
+                <span class="stat-number">50K+</span>
+                <span class="stat-label">Produk</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">100K+</span>
+                <span class="stat-label">Pelanggan</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">4.9</span>
+                <span class="stat-label">Rating</span>
+            </div>
+        </div>
+
+        <!-- Scroll indicator -->
+        <div class="scroll-indicator">
+            <span>Scroll untuk melihat lebih banyak</span>
+            <br>
+            <span style="font-size: 1.5rem;">↓</span>
+        </div>
+    </div>
+
+    <script>
+        function handleClick(action) {
+            if (action === 'shop') {
+                alert('Mengarahkan ke halaman produk...');
+            } else if (action === 'explore') {
+                alert('Mengarahkan ke katalog produk...');
+            }
+        }
+
+        // Add mouse move effect
+        document.addEventListener('mousemove', function(e) {
+            const shapes = document.querySelectorAll('.bg-shape');
+            const mouseX = e.clientX / window.innerWidth;
+            const mouseY = e.clientY / window.innerHeight;
+            
+            shapes.forEach((shape, index) => {
+                const speed = (index + 1) * 0.5;
+                const x = mouseX * speed;
+                const y = mouseY * speed;
+                
+                shape.style.transform = `translate(${x}px, ${y}px)`;
+            });
+        });
+
+        // Add scroll effect
+        window.addEventListener('scroll', function() {
+            const scrolled = window.pageYOffset;
+            const parallax = document.querySelector('.hero-banner');
+            const speed = scrolled * 0.5;
+            
+            parallax.style.transform = `translateY(${speed}px)`;
+        });
+    </script>
+</body>
+</html>
