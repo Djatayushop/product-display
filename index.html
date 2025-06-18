@@ -1,120 +1,415 @@
-    <!-- Order Section -->
-    <section id="order" class="py-16 bg-primary text-white">
-        <div class="container mx-auto px-4">
-            <div class="max-w-4xl mx-auto">
-                <h2 class="title-font text-3xl md:text-4xl font-bold text-center mb-6">Dapatkan Odyssey Crossbody Bag Sekarang!</h2>
-                <p class="text-center text-xl mb-8">Promo spesial untuk pembelian hari ini saja!</p>
-                
-                <div class="bg-white text-gray-800 rounded-lg shadow-xl overflow-hidden">
-                    <div class="flex flex-col md:flex-row">
-                        <div class="md:w-1/2 p-6">
-                            <img src="https://elaandearth.com.au/cdn/shop/files/OysterWithGold-OdysseyCrossbodyBag_Lifestyle2_bf2c2fa0-c96c-491d-a8db-212321310671_540x.png" alt="Odyssey Crossbody Bag" class="w-full rounded-lg mb-4">
-                            
-                            <div class="flex justify-between items-center mb-4">
-                                <div>
-                                    <span class="text-gray-500 line-through text-lg">Rp 469.000</span>
-                                    <span class="ml-2 bg-red-100 text-red-800 text-xs font-semibold px-2 py-1 rounded">Hemat 49%</span>
-                                </div>
-                                <div class="text-2xl font-bold text-primary">Rp 210.000</div>
-                            </div>
-                            
-                            <div class="bg-yellow-50 border-l-4 border-yellow-400 p-4 mb-4">
-                                <div class="flex">
-                                    <div class="flex-shrink-0">
-                                        <i class="fas fa-exclamation-circle text-yellow-400"></i>
-                                    </div>
-                                    <div class="ml-3">
-                                        <p class="text-sm text-yellow-700">
-                                            <span class="font-bold">PERHATIAN:</span> Stok terbatas! Harga promo hanya berlaku untuk 78 tas berikutnya.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <div class="bg-blue-50 border-l-4 border-blue-400 p-4 mb-6">
-                                <div class="flex">
-                                    <div class="flex-shrink-0">
-                                        <i class="fas fa-gift text-blue-400"></i>
-                                    </div>
-                                    <div class="ml-3">
-                                        <p class="text-sm text-blue-700">
-                                            <span class="font-bold">BONUS:</span> Pouch makeup eksklusif senilai Rp 89.000 GRATIS untuk setiap pembelian!
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <div class="text-center mb-4">
-                                <div class="inline-block bg-red-100 text-red-800 px-4 py-2 rounded-full font-semibold">
-                                    <i class="fas fa-clock mr-2"></i> Promo Berakhir Dalam:
-                                </div>
-                                <div class="mt-2 flex justify-center space-x-2" id="countdown">
-                                    <div class="bg-gray-800 text-white rounded p-2 text-center w-16">
-                                        <div class="text-2xl font-bold" id="hours">00</div>
-                                        <div class="text-xs">Jam</div>
-                                    </div>
-                                    <div class="bg-gray-800 text-white rounded p-2 text-center w-16">
-                                        <div class="text-2xl font-bold" id="minutes">00</div>
-                                        <div class="text-xs">Menit</div>
-                                    </div>
-                                    <div class="bg-gray-800 text-white rounded p-2 text-center w-16">
-                                        <div class="text-2xl font-bold" id="seconds">00</div>
-                                        <div class="text-xs">Detik</div>
-                                    </div>
-                                </div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Large Capacity Casual Bag - Order Form</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .animate-pulse {
+            animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        }
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+        .transition-all {
+            transition: all 0.3s ease;
+        }
+        .select-wrapper {
+            position: relative;
+        }
+        .select-wrapper::after {
+            content: "▼";
+            font-size: 0.8rem;
+            top: 50%;
+            right: 1rem;
+            transform: translateY(-50%);
+            position: absolute;
+            pointer-events: none;
+            color: #6b7280;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <div class="max-w-4xl mx-auto p-4 md:p-6">
+        <!-- Header -->
+        <div class="flex justify-between items-center mb-6">
+            <h1 class="text-2xl md:text-3xl font-bold text-gray-800">Large Capacity Casual Bag</h1>
+            <div class="flex items-center space-x-2">
+                <span class="text-yellow-500"><i class="fas fa-star"></i></span>
+                <span class="text-gray-700">4.9 (128 reviews)</span>
+            </div>
+        </div>
+
+        <!-- Product Info -->
+        <div class="flex flex-col md:flex-row gap-6 mb-8">
+            <!-- Product Image -->
+            <div class="w-full md:w-1/2 bg-white rounded-lg shadow-md overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1591348278863-a8fb3887e2aa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+                      alt="Large Capacity Casual Bag"
+                      class="w-full h-64 md:h-96 object-cover">
+            </div>
+
+            <!-- Order Form -->
+            <div class="w-full md:w-1/2">
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <div class="mb-6">
+                        <h2 class="text-xl font-semibold text-gray-800 mb-2">Order Details</h2>
+                        <p class="text-gray-600 mb-4">Premium quality casual bag with large capacity, perfect for daily use.</p>
+                                                
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-2xl font-bold text-indigo-600">Rp 299,000</span>
+                            <span class="text-sm text-gray-500 line-through">Rp 399,000</span>
+                        </div>
+                                                
+                        <div class="bg-yellow-50 border-l-4 border-yellow-400 p-3 mb-4">
+                            <div class="flex items-center">
+                                <i class="fas fa-bolt text-yellow-500 mr-2"></i>
+                                <span class="text-sm text-yellow-700">Limited time offer! Save Rp 100,000</span>
                             </div>
                         </div>
-                        
-                        <div class="md:w-1/2 bg-gray-50 p-6">
-                            <h3 class="text-xl font-bold mb-4 text-primary">Isi Form Pemesanan</h3>
-                            
-                            <form class="space-y-4" id="order-form">
-                                <div>
-                                    <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Nama Lengkap</label>
-                                    <input type="text" id="name" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-primary focus:border-primary" required>
-                                </div>
-                                
-                                <div>
-                                    <label for="phone" class="block text-sm font-medium text-gray-700 mb-1">Nomor WhatsApp</label>
-                                    <input type="tel" id="phone" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-primary focus:border-primary" required>
-                                </div>
-                                
-                                <div>
-                                    <label for="address" class="block text-sm font-medium text-gray-700 mb-1">Alamat Lengkap</label>
-                                    <textarea id="address" rows="3" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-primary focus:border-primary" required></textarea>
-                                </div>
-                                
-                                <div>
-                                    <label for="quantity" class="block text-sm font-medium text-gray-700 mb-1">Jumlah Pesanan</label>
-                                    <select id="quantity" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-primary focus:border-primary">
-                                        <option value="1">1 Tas</option>
-                                        <option value="2">2 Tas (Bonus Tambahan)</option>
-                                        <option value="3">3 Tas (Bonus Spesial)</option>
+                    </div>
+
+                    <form id="orderForm" class="space-y-4">
+                        <!-- Color Selection -->
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Color</label>
+                            <div class="flex space-x-2">
+                                <label class="inline-flex items-center">
+                                    <input type="radio" name="color" value="Black" class="hidden peer" checked>
+                                    <div class="w-10 h-10 rounded-full bg-black border-2 border-transparent peer-checked:border-indigo-500 cursor-pointer"></div>
+                                </label>
+                                <label class="inline-flex items-center">
+                                    <input type="radio" name="color" value="Beige" class="hidden peer">
+                                    <div class="w-10 h-10 rounded-full bg-amber-200 border-2 border-transparent peer-checked:border-indigo-500 cursor-pointer"></div>
+                                </label>
+                                <label class="inline-flex items-center">
+                                    <input type="radio" name="color" value="Navy" class="hidden peer">
+                                    <div class="w-10 h-10 rounded-full bg-blue-900 border-2 border-transparent peer-checked:border-indigo-500 cursor-pointer"></div>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Quantity -->
+                        <div>
+                            <label for="quantity" class="block text-sm font-medium text-gray-700 mb-2">Quantity</label>
+                            <div class="flex items-center border border-gray-300 rounded-md w-24">
+                                <button type="button" id="decrement" class="px-3 py-2 text-gray-600 hover:bg-gray-100 rounded-l-md">
+                                    <i class="fas fa-minus"></i>
+                                </button>
+                                <input type="number" id="quantity" name="quantity" value="1" min="1" max="10"
+                                        class="w-full text-center py-2 border-0 focus:ring-0">
+                                <button type="button" id="increment" class="px-3 py-2 text-gray-600 hover:bg-gray-100 rounded-r-md">
+                                    <i class="fas fa-plus"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Customer Info -->
+                        <div class="space-y-2">
+                            <label for="name" class="block text-sm font-medium text-gray-700">Nama</label>
+                            <input type="text" id="name" name="name" placeholder="Nama Lengkap" required
+                                    class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                        </div>
+
+                        <div class="space-y-2">
+                            <label for="phone" class="block text-sm font-medium text-gray-700">No Handphone/WhatsApp</label>
+                            <input type="tel" id="phone" name="phone" placeholder="Contoh: 081234567890" required
+                                    class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                        </div>
+
+                        <!-- Shipping Address -->
+                        <div class="space-y-2">
+                            <label for="address" class="block text-sm font-medium text-gray-700">Alamat Lengkap</label>
+                            <textarea id="address" name="address" rows="3" placeholder="Contoh: Jl. Merdeka No. 123, RT 05/RW 02" required
+                                       class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"></textarea>
+                        </div>
+
+                        <!-- Additional Address Fields -->
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div class="space-y-2">
+                                <label for="province" class="block text-sm font-medium text-gray-700">Province</label>
+                                <div class="select-wrapper">
+                                    <select id="province" name="province" required
+                                            class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500 appearance-none">
+                                        <option value="" disabled selected>Select Province</option>
+                                        <option value="DKI Jakarta">DKI Jakarta</option>
+                                        <option value="Jawa Barat">Jawa Barat</option>
+                                        <option value="Jawa Tengah">Jawa Tengah</option>
+                                        <option value="Jawa Timur">Jawa Timur</option>
+                                        <option value="Banten">Banten</option>
+                                        <option value="Bali">Bali</option>
+                                        <option value="Sumatera Utara">Sumatera Utara</option>
+                                        <option value="Sumatera Barat">Sumatera Barat</option>
+                                        <option value="Sumatera Selatan">Sumatera Selatan</option>
+                                        <option value="Lampung">Lampung</option>
                                     </select>
                                 </div>
-                                
-                                <div class="pt-4">
-                                    <button type="submit" class="w-full bg-primary hover:bg-accent text-white font-bold py-3 px-4 rounded-md transition duration-300 flex items-center justify-center">
-                                        <i class="fas fa-shopping-cart mr-2"></i> PESAN SEKARANG
-                                    </button>
-                                </div>
-                            </form>
-                            
-                            <div class="mt-6 border-t border-gray-200 pt-4">
-                                <div class="flex items-start">
-                                    <div class="flex-shrink-0">
-                                        <i class="fas fa-shield-alt text-primary"></i>
-                                    </div>
-                                    <div class="ml-3">
-                                        <p class="text-sm text-gray-600">
-                                            <span class="font-bold">Garansi 100% Uang Kembali</span> jika produk tidak sesuai deskripsi atau rusak saat diterima.
-                                        </p>
-                                    </div>
+                            </div>
+
+                            <div class="space-y-2">
+                                <label for="city" class="block text-sm font-medium text-gray-700">City/District</label>
+                                <div class="select-wrapper">
+                                    <select id="city" name="city" required
+                                            class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500 appearance-none">
+                                        <option value="" disabled selected>Select City/District</option>
+                                        <option value="Jakarta Pusat">Jakarta Pusat</option>
+                                        <option value="Jakarta Selatan">Jakarta Selatan</option>
+                                        <option value="Jakarta Barat">Jakarta Barat</option>
+                                        <option value="Jakarta Timur">Jakarta Timur</option>
+                                        <option value="Jakarta Utara">Jakarta Utara</option>
+                                        <option value="Bandung">Bandung</option>
+                                        <option value="Bogor">Bogor</option>
+                                        <option value="Depok">Depok</option>
+                                        <option value="Tangerang">Tangerang</option>
+                                        <option value="Bekasi">Bekasi</option>
+                                    </select>
                                 </div>
                             </div>
+
+                            <div class="space-y-2">
+                                <label for="district" class="block text-sm font-medium text-gray-700">District</label>
+                                <div class="select-wrapper">
+                                    <select id="district" name="district" required
+                                            class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500 appearance-none">
+                                        <option value="" disabled selected>Select District</option>
+                                        <option value="Menteng">Menteng</option>
+                                        <option value="Gambir">Gambir</option>
+                                        <option value="Setiabudi">Setiabudi</option>
+                                        <option value="Kebayoran Baru">Kebayoran Baru</option>
+                                        <option value="Tebet">Tebet</option>
+                                        <option value="Cilandak">Cilandak</option>
+                                        <option value="Pasar Minggu">Pasar Minggu</option>
+                                        <option value="Kemang">Kemang</option>
+                                        <option value="Kebon Jeruk">Kebon Jeruk</option>
+                                        <option value="Grogol">Grogol</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="space-y-2">
+                                <label for="postal_code" class="block text-sm font-medium text-gray-700">Postal Code</label>
+                                <input type="text" id="postal_code" name="postal_code" placeholder="12345"
+                                       class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                            </div>
                         </div>
+
+                        <!-- Additional Notes -->
+                        <div class="space-y-2">
+                            <label for="notes" class="block text-sm font-medium text-gray-700">Additional Notes (Optional)</label>
+                            <textarea id="notes" name="notes" rows="2" placeholder="Special instructions for delivery"
+                                       class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"></textarea>
+                        </div>
+
+                        <!-- Payment Method -->
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Payment Method</label>
+                            <div class="space-y-2">
+                                <label class="flex items-center space-x-3 p-3 border border-gray-300 rounded-md cursor-pointer hover:bg-gray-50">
+                                    <input type="radio" name="payment" value="Bank Transfer" class="h-4 w-4 text-indigo-600 focus:ring-indigo-500" checked>
+                                    <span class="block text-sm font-medium text-gray-700">Bank Transfer</span>
+                                </label>
+                                <label class="flex items-center space-x-3 p-3 border border-gray-300 rounded-md cursor-pointer hover:bg-gray-50">
+                                    <input type="radio" name="payment" value="COD" class="h-4 w-4 text-indigo-600 focus:ring-indigo-500">
+                                    <span class="block text-sm font-medium text-gray-700">Cash on Delivery</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Order Summary -->
+                        <div class="border-t border-gray-200 pt-4 mt-4">
+                            <div class="flex justify-between mb-2">
+                                <span class="text-sm text-gray-600">Subtotal</span>
+                                <span id="subtotal" class="text-sm font-medium">Rp 299,000</span>
+                            </div>
+                            <div class="flex justify-between mb-2">
+                                <span class="text-sm text-gray-600">Shipping</span>
+                                <span class="text-sm font-medium text-green-600">FREE</span>
+                            </div>
+                            <div class="flex justify-between text-lg font-bold mt-3">
+                                <span>Total</span>
+                                <span id="total" class="text-indigo-600">Rp 299,000</span>
+                            </div>
+                        </div>
+
+                        <!-- Action Buttons -->
+                        <div class="flex flex-col space-y-3 mt-6">
+                            <button type="submit" id="submitBtn" class="w-full bg-indigo-600 text-white py-3 px-4 rounded-md hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 transition-all flex items-center justify-center">
+                                <i class="fas fa-shopping-cart mr-2"></i>
+                                <span>Place Order</span>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- Features -->
+        <div class="bg-white rounded-lg shadow-md p-6 mb-8">
+            <h2 class="text-xl font-semibold text-gray-800 mb-4">Product Features</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <div class="flex items-start space-x-3">
+                    <div class="bg-indigo-100 p-2 rounded-full">
+                        <i class="fas fa-expand text-indigo-600"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-medium text-gray-800">Large Capacity</h3>
+                        <p class="text-sm text-gray-600">Up to 20L storage space</p>
+                    </div>
+                </div>
+                <div class="flex items-start space-x-3">
+                    <div class="bg-indigo-100 p-2 rounded-full">
+                        <i class="fas fa-weight text-indigo-600"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-medium text-gray-800">Lightweight</h3>
+                        <p class="text-sm text-gray-600">Only 450 grams</p>
+                    </div>
+                </div>
+                <div class="flex items-start space-x-3">
+                    <div class="bg-indigo-100 p-2 rounded-full">
+                        <i class="fas fa-shield-alt text-indigo-600"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-medium text-gray-800">Water Resistant</h3>
+                        <p class="text-sm text-gray-600">Durable polyester material</p>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
+
+        <!-- Success Modal -->
+        <div id="successModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
+            <div class="bg-white rounded-lg p-6 max-w-md w-full mx-4">
+                <div class="text-center">
+                    <div class="mx-auto flex items-center justify-center h-12 w-12 rounded-full bg-green-100 mb-4">
+                        <i class="fas fa-check text-green-600"></i>
+                    </div>
+                    <h3 class="text-lg font-medium text-gray-900 mb-2">Order Placed Successfully!</h3>
+                    <p class="text-sm text-gray-500 mb-4">Your order has been submitted. We'll contact you shortly for confirmation.</p>
+                    <div class="mt-4">
+                        <button id="closeModal" type="button" class="inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2 bg-indigo-600 text-base font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 sm:text-sm">
+                            Continue Shopping
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const quantityInput = document.getElementById('quantity');
+            const decrementBtn = document.getElementById('decrement');
+            const incrementBtn = document.getElementById('increment');
+            const subtotalEl = document.getElementById('subtotal');
+            const totalEl = document.getElementById('total');
+            const orderForm = document.getElementById('orderForm');
+            const submitBtn = document.getElementById('submitBtn');
+            const successModal = document.getElementById('successModal');
+            const closeModal = document.getElementById('closeModal');
+                        
+            const price = 299000;
+
+            // Quantity controls
+            decrementBtn.addEventListener('click', () => {
+                let value = parseInt(quantityInput.value);
+                if (value > 1) {
+                    quantityInput.value = value - 1;
+                    updateTotal();
+                }
+            });
+
+            incrementBtn.addEventListener('click', () => {
+                let value = parseInt(quantityInput.value);
+                if (value < 10) {
+                    quantityInput.value = value + 1;
+                    updateTotal();
+                }
+            });
+
+            quantityInput.addEventListener('change', () => {
+                let value = parseInt(quantityInput.value);
+                if (isNaN(value) || value < 1) quantityInput.value = 1;
+                if (value > 10) quantityInput.value = 10;
+                updateTotal();
+            });
+
+            function updateTotal() {
+                const quantity = parseInt(quantityInput.value);
+                const subtotal = quantity * price;
+                subtotalEl.textContent = formatCurrency(subtotal);
+                totalEl.textContent = formatCurrency(subtotal);
+            }
+
+            function formatCurrency(amount) {
+                return 'Rp ' + amount.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+            }
+
+            // Form submission
+            orderForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                window.location.href = 'https://nava.orderonline.id/checkout-large-capacity-casual-bag';
+            });
+
+            // Close modal
+            closeModal.addEventListener('click', function() {
+                successModal.classList.add('hidden');
+            });
+            
+            // Simple dynamic select options (in a real app, this would be API calls)
+            const provinceSelect = document.getElementById('province');
+            const citySelect = document.getElementById('city');
+            const districtSelect = document.getElementById('district');
+            
+            // Sample data for demonstration
+            const citiesByProvince = {
+                'DKI Jakarta': ['Jakarta Pusat', 'Jakarta Selatan', 'Jakarta Barat', 'Jakarta Timur', 'Jakarta Utara'],
+                'Jawa Barat': ['Bandung', 'Bogor', 'Depok', 'Bekasi', 'Cimahi'],
+                'Jawa Tengah': ['Semarang', 'Surakarta', 'Salatiga', 'Pekalongan', 'Tegal'],
+                'Jawa Timur': ['Surabaya', 'Malang', 'Kediri', 'Madiun', 'Blitar']
+            };
+            
+            const districtsByCity = {
+                'Jakarta Pusat': ['Menteng', 'Gambir', 'Tanah Abang', 'Senen', 'Cempaka Putih'],
+                'Jakarta Selatan': ['Kebayoran Baru', 'Kebayoran Lama', 'Pancoran', 'Tebet', 'Setiabudi'],
+                'Bandung': ['Bandung Kulon', 'Babakan Ciparay', 'Bojongloa Kaler', 'Bojongloa Kidul', 'Cibeunying Kaler'],
+                'Bogor': ['Bogor Selatan', 'Bogor Timur', 'Bogor Utara', 'Bogor Tengah', 'Tanah Sereal']
+            };
+            
+            provinceSelect.addEventListener('change', function() {
+                const selectedProvince = this.value;
+                citySelect.innerHTML = '<option value="" disabled selected>Select City/District</option>';
+                
+                if (selectedProvince && citiesByProvince[selectedProvince]) {
+                    citiesByProvince[selectedProvince].forEach(city => {
+                        const option = document.createElement('option');
+                        option.value = city;
+                        option.textContent = city;
+                        citySelect.appendChild(option);
+                    });
+                }
+                
+                // Reset district select
+                districtSelect.innerHTML = '<option value="" disabled selected>Select District</option>';
+            });
+            
+            citySelect.addEventListener('change', function() {
+                const selectedCity = this.value;
+                districtSelect.innerHTML = '<option value="" disabled selected>Select District</option>';
+                
+                if (selectedCity && districtsByCity[selectedCity]) {
+                    districtsByCity[selectedCity].forEach(district => {
+                        const option = document.createElement('option');
+                        option.value = district;
+                        option.textContent = district;
+                        districtSelect.appendChild(option);
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
